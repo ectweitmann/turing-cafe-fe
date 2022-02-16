@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReservationForm from './ReservationForm';
 import ReservationsContainer from './ReservationsContainer';
 import './App.css';
 
@@ -25,7 +26,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-
+          <ReservationForm />
         </div>
         <ReservationsContainer reservations={this.state.reservations}/>
       </div>
