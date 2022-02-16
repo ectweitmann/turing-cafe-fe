@@ -1,19 +1,13 @@
-import React, { Component } from 'react';
-import './Reservation.css';
+import React from 'react';
+import './Reservations.css';
 
-class Reservation extends Component {
-  constructor() {
-    super();
-    this.state = {
-      reservation: []
-    }
-  }
-
-  render = () => {
-    return (
-      <h1>Hello World</h1>
-    )
-  }
+const Reservations = ({reservations}) => {
+  return (
+    <React.Fragment>
+      <h2>{reservations.name}</h2>
+      <p>{reservations.}
+    </React.Fragment>
+  )
 }
 
-export default Reservation;
+export default Reservations;
