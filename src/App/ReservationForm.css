@@ -1,0 +1,10 @@
+form {
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+}
+
+input {
+  width: 18%;
+  border: 1px solid black;
+}
