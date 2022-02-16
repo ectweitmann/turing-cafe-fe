@@ -8,7 +8,7 @@ class ReservationForm extends Component {
       name: '',
       date: '',
       time: '',
-      numberOfGuests: ''
+      number: ''
     }
   }
 
@@ -20,11 +20,13 @@ class ReservationForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const newReservation = {
+      id: Date.now(),
       name: this.state.name,
       date: this.state.date,
       time: this.state.time,
-      numberOfGuests: this.state.numberOfGuests
+      number: this.state.number
     }
+    console.log(newReservation)
     this.props.addReservation(newReservation);
     this.clearInput();
   }
@@ -35,7 +37,7 @@ class ReservationForm extends Component {
       name: '',
       date: '',
       time: '',
-      numberOfGuests: ''
+      number: ''
     });
   }
 
@@ -66,11 +68,11 @@ class ReservationForm extends Component {
         <input
           type="text"
           placeholder="Number of Guests"
-          name="numberOfGuests"
-          value={this.state.numberOfGuests}
+          name="number"
+          value={this.state.number}
           onChange={this.handleChange}
         />
-        <button onClick={this.handleSubmit}>Make Reservation</button>
+        <button className="submit-button" onClick={this.handleSubmit}>Make Reservation</button>
       </form>
     )
   }
