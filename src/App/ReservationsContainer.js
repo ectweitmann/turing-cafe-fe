@@ -4,7 +4,6 @@ import './ReservationsContainer.css';
 
 const ReservationsContainer = ({ reservations }) => {
   const reservationList = reservations.map(reservation => {
-    console.log(reservation)
     return <Reservations
       key={reservation.id}
       id={reservation.id}
